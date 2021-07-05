@@ -1,0 +1,193 @@
+// Variable Declaration
+
+$primary_color: #005ba9; // Main Color used across the site
+$header_font: 'Arvo', serif; // Font for h1-h6
+$body_font: 'Lato', sans-serif; // Font for everything else
+
+$container_width: 1200px;
+
+$browser-context: 16; // Default Font Size
+
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+
+
+body {
+	margin: 0;
+	font-family: $body_font;
+
+	.container {
+		width: 90%;
+		max-width: $container_width;
+		margin: 0 auto;
+	}
+
+	@for $i from 1 through 6 {
+		h#{$i} {
+			font-family: $header_font;
+		}
+	}
+
+	.blueBackground {
+		background-color: $primary_color;
+		color: white;
+		height: available;
+	}
+
+	.blueBorder {
+		border: solid 5px $primary_color;
+		color: $primary_color;
+		height: available;
+
+		p {
+			color: gray;
+		}
+	}
+
+	.imgBlock {
+		img {
+			width: 100%;
+		}
+	}
+
+	.blueBackground, .blueBorder {
+		padding: 20px;
+
+		h2 {
+			margin: 0;
+		}
+	}
+
+	header {
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		.nav {
+			height: 65px;
+			margin: 60px 0 10px;
+
+			.brand {
+				img {
+					height: 100%;
+				}
+			}
+		}
+	}
+
+	main {
+		.heroImg {
+			background: url("../assets/images/bg.jpg");
+			height: 100vh;
+			background-size: cover;
+
+			.textContent {
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+				h1 {
+					margin: 0;
+					font-size: em(62);
+					color: white;
+				}
+			}
+		}
+
+		.mainContent {
+			padding: 40px 0;
+
+			.section_2 {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			form {
+				.row {
+					&:nth-of-type(2) {
+						margin-top: 15px;
+					}
+				}
+
+				input[type='submit'] {
+					background-color: $primary_color;
+					color: white;
+					font-family: $header_font;
+					border: none;
+					width: 100%;
+					padding: 10px;
+					margin: 0;
+				}
+
+				.formStyles {
+					width: 100%;
+					border: none;
+					border-top: 5px solid $primary_color;
+					background-color: #e6e6e6;
+					color: $primary_color;
+					padding: 10px;
+					box-sizing: border-box;
+
+					&::placeholder {
+						color: $primary_color;
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		.mapContainer {
+			iframe {
+				width: 100%;
+			}
+		}
+	}
+
+	footer {
+		background-color: black;
+		color: white;
+
+		.social_icons {
+			text-align: end;
+
+			img {
+				height: 21px;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 992px) {
+	body {
+		header {
+			.nav {
+				text-align: center;
+			}
+		}
+
+		main {
+			.section_1, .section_2 {
+				> div {
+					margin-top: 20px;
+				}
+			}
+
+			.section_2 {
+				.facilities {
+					display: none;
+				}
+			}
+		}
+
+		footer {
+			padding: 10px;
+
+			.row > div {
+				text-align: center;
+			}
+		}
+	}
+}

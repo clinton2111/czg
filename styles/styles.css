@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+body .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body h1 {
+  font-family: "Arvo", serif;
+}
+body h2 {
+  font-family: "Arvo", serif;
+}
+body h3 {
+  font-family: "Arvo", serif;
+}
+body h4 {
+  font-family: "Arvo", serif;
+}
+body h5 {
+  font-family: "Arvo", serif;
+}
+body h6 {
+  font-family: "Arvo", serif;
+}
+body .blueBackground {
+  background-color: #005ba9;
+  color: white;
+  height: available;
+}
+body .blueBorder {
+  border: solid 5px #005ba9;
+  color: #005ba9;
+  height: available;
+}
+body .blueBorder p {
+  color: gray;
+}
+body .imgBlock img {
+  width: 100%;
+}
+body .blueBackground, body .blueBorder {
+  padding: 20px;
+}
+body .blueBackground h2, body .blueBorder h2 {
+  margin: 0;
+}
+body header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+body header .nav {
+  height: 65px;
+  margin: 60px 0 10px;
+}
+body header .nav .brand img {
+  height: 100%;
+}
+body main .heroImg {
+  background: url("../assets/images/bg.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+body main .heroImg .textContent {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+body main .heroImg .textContent h1 {
+  margin: 0;
+  font-size: 3.875em;
+  color: white;
+}
+body main .mainContent {
+  padding: 40px 0;
+}
+body main .mainContent .section_2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+body main .mainContent form .row:nth-of-type(2) {
+  margin-top: 15px;
+}
+body main .mainContent form input[type=submit] {
+  background-color: #005ba9;
+  color: white;
+  font-family: "Arvo", serif;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+}
+body main .mainContent form .formStyles {
+  width: 100%;
+  border: none;
+  border-top: 5px solid #005ba9;
+  background-color: #e6e6e6;
+  color: #005ba9;
+  padding: 10px;
+  box-sizing: border-box;
+}
+body main .mainContent form .formStyles::placeholder {
+  color: #005ba9;
+  opacity: 1;
+}
+body main .mapContainer iframe {
+  width: 100%;
+}
+body footer {
+  background-color: black;
+  color: white;
+}
+body footer .social_icons {
+  text-align: end;
+}
+body footer .social_icons img {
+  height: 21px;
+}
+
+@media (max-width: 992px) {
+  body header .nav {
+    text-align: center;
+  }
+  body main .section_1 > div, body main .section_2 > div {
+    margin-top: 20px;
+  }
+  body main .section_2 .facilities {
+    display: none;
+  }
+  body footer {
+    padding: 10px;
+  }
+  body footer .row > div {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
